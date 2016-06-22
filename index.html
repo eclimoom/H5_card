@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Lottery Demo</title>
+    <link rel="stylesheet" href="style/base.css" />
+    <style type="text/css">
+        body{
+            height:1000px;
+        }
+        .cardContainer {
+            position:relative;
+            width: 300px;
+            height:100px;
+        }
+        .cardContainer img{width: 100%;}
+        .drawPercent {
+            color:#F60;
+        }
+    </style>
+</head>
+<body>
+    <button id="freshBtn">刷新彩票</button><label>已刮开 <span id="drawPercent" class="drawPercent">0%</span> 区域。</label>
+    <div id="cardContainer" class="cardContainer">
+        <img src="images/1.png">
+        
+    </div>
+    <script src="libs/CardCover.js"></script>
+    <script>
+
+        $(function(){
+            var drawPercentNode = document.getElementById('drawPercent');
+            function drawPercent(percent) {
+                drawPercentNode.innerHTML = percent + '%';
+            }
+
+            //id, coverImg, width, height, drawPercentCallback
+            var card = new CardCover(
+                    {
+                        id: 'cardContainer',
+                        coverImg: 'images/cover.png',
+                        width:300,
+                        height:144,
+                        percentClear:60,
+//                        drawPercentCallback: drawPercent
+                    }
+            );
+            card.init();
+        });
+
+    </script>
+</body>
+</html>

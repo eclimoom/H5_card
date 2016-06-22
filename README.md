@@ -35,5 +35,3 @@ function drawPercent(percent) {
 `percentClear`:刮开的区域百分比 达到多少清空涂层,默认100,可空
 
 `drawPercentCallback`:刮开的区域百分比回调函数,可空
-
-

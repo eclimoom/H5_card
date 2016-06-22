@@ -7,6 +7,7 @@ body {
     color: #3c3c3c;
     background-color: #fff;
     margin: 0;
+    height: 100%;
 }
 
 /* Links
@@ -200,3 +201,69 @@ p {
 .affix{position:fixed;}
 .text-center{text-align:center;}
 .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+
+
+
+
+
+
+
+
+
+
+.wrap{position:relative;width: 100%;height: 100%;}
+.cardContainer {    position: absolute;
+    z-index: 3;
+    top: 30px;
+    left: 4%;
+    width: 92%;}
+.cardContainer img{width: 100%;display: block;}
+
+/**
+* iPhone 4/4s portrait
+*/@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-device-pixel-ratio: 2)
+and (device-aspect-ratio: 2/3)
+and (orientation:portrait)  {
+
+}
+
+/**
+ *  iPhone 5/5s portrait
+ */
+
+@media only screen
+and (max-device-width : 320px){
+    .wrap .set-info-wrap input{height: 32px;line-height: 32px;}
+    .wrap .set-info-wrap .sent-btn{height: 32px;line-height: 30px;}
+    .wrap .banner-wrap{padding-top: 30px;}
+}
+
+
+/*//iPhone 6 Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+
+}
+
+/*//iPhone 6+ Portrait*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px){
+    .wrap .set-info-wrap input{height: 40px;line-height: 40px;}
+    .wrap .set-info-wrap .sent-btn{height: 42px;line-height: 40px;}
+}
+
+
+/*//iPhone 6 and iPhone 6+ portrait*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
+
+}
+
+/**
+ *  Galaxy S3 portrait
+ */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px){
+
+}

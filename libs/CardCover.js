@@ -40,7 +40,6 @@ CardCover.prototype = {
     resizeCanvas: function (canvas, width, height) {
         canvas.width = width;
         canvas.height = height;
-        console.log(width,height);
         canvas.getContext('2d').clearRect(0, 0, width, height);
     },
     drawPoint: function (x, y) {

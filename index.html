@@ -3,51 +3,110 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>Lottery Demo</title>
+    <title>H5 抽奖</title>
     <link rel="stylesheet" href="style/base.css" />
     <style type="text/css">
-        body{
-            height:1000px;
+        .wrap{background: url("images/BG.jpg") center center no-repeat;}
+        .img-wrap img{display:block;width: 100%;}
+        .logo-wrap{width: 31.76%;
+            margin: 0 0 0 7.4%;
+            padding-top: 30px;}
+        .banner-wrap{width: 72.78%;margin: 0 auto 20px;padding-top: 50px;}
+        .bd-wrap{width: 85.2%;margin-left: 7.4%;
+            position: relative;
+            /*background: rgba(255, 0, 0, 0.3);*/
         }
-        .cardContainer {
-            position:relative;
-            width: 300px;
-            height:100px;
+        .right-wrap{width: 73.15%;
+            position: fixed;
+            bottom: 22%;
+            left: 13.42%;z-index: 1;}
+        .ft-wrap{position: fixed;bottom: 12px;left:6.71%;width: 45.37%;}
+
+        .set-info-wrap input{display: block;width: 94%;padding:0 2.5%;margin-bottom: 12px;outline: none;
+            height: 36px;
+            background: #121f26;
+            border: 1px solid #6d7173;
+            color: #6d7377;
+            border-radius: 2px;;
+            line-height: 36px;}
+        .set-info-wrap .sent-btn{display: block;background: #bc9b52;
+        border-radius: 4px;border: 0;border-bottom: 3px solid #715e33;width: 100%;color: #fff;
+        text-shadow: 1px -1px 0 #715e33;font-size: 18px;outline: none;
+            height: 38px;
+            line-height: 35px;
         }
-        .cardContainer img{width: 100%;}
-        .drawPercent {
-            color:#F60;
+        .set-info-wrap .sent-btn:hover,.set-info-wrap .sent-btn:active{
+            background: #8e743d;
+            color: #efdcb4;
+            border-bottom-color:#8e743d;
         }
+
+        .show-result{
+            display: none;
+            position: relative;
+            padding-top:0;
+        }
+        .result-wrap{position: relative;width: 100%;}
+
+        .res-img{position: relative;}
     </style>
 </head>
 <body>
-    <button id="freshBtn">刷新彩票</button><label>已刮开 <span id="drawPercent" class="drawPercent">0%</span> 区域。</label>
-    <div id="cardContainer" class="cardContainer">
-        <img src="images/1.png">
-        
+<div class="wrap">
+    <div class="logo-wrap img-wrap"><img src="images/logo.png" /></div>
+    <div class="banner-wrap img-wrap"><img src="images/banner.png" /></div>
+    <div class="bd-wrap">
+        <form class="set-info-wrap">
+            <input type="text" placeholder="请输入姓名" />
+            <input type="text" placeholder="您的手机号码" />
+            <input type="text" placeholder="您的公司或单位名称" />
+            <input type="text" placeholder="您的职务" />
+            <button type="button" class="sent-btn">下一步</button>
+        </form>
+        <div class="show-result">
+            <div class="img-wrap result-wrap"><img src="images/result-bg.png"></div>
+            <div class="cardContainer">
+                <div class="inner img-wrap" id="cardContainer">
+                    <img src="images/1.png" class="res-img" />
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <div class="right-wrap img-wrap"><img src="images/right.gif" /></div>
+    <div class="ft-wrap img-wrap"><img src="images/piano.png" /></div>
+
+</div>
+
+
+    <script src="libs/zepto.min.js"></script>
     <script src="libs/CardCover.js"></script>
-    <script>
 
-        $(function(){
-            var drawPercentNode = document.getElementById('drawPercent');
-            function drawPercent(percent) {
-                drawPercentNode.innerHTML = percent + '%';
-            }
+    <script type="text/javascript">
+        window.onload = function(){
 
-            //id, coverImg, width, height, drawPercentCallback
+        }
+
+
+        $('body').on('click','.sent-btn',function(){
+            var resultEle = $('#cardContainer');
+            $('.set-info-wrap').hide();
+            $('.show-result').show();
+            console.log(resultEle.width(),resultEle.height());
             var card = new CardCover(
                     {
                         id: 'cardContainer',
                         coverImg: 'images/cover.png',
-                        width:300,
-                        height:144,
-                        percentClear:60,
-//                        drawPercentCallback: drawPercent
+                        width:resultEle.width(),
+                        height:resultEle.height()+1,
+                        percentClear:70,
+                        drawPercentCallback:function(){}
                     }
             );
             card.init();
         });
+
 
     </script>
 </body>

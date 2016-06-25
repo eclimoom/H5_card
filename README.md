@@ -35,3 +35,8 @@ function drawPercent(percent) {
 `percentClear`:刮开的区域百分比 达到多少清空涂层,默认100,可空
 
 `drawPercentCallback`:刮开的区域百分比回调函数,可空
+
+
+
+微信授权
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx841a97238d9e17b2&redirect_uri=http://cps.dianping.com/weiXinRedirect&response_type=code&scope=snsapi_base&state=type%3Dquan%2Curl%3Dhttp%3A%2F%2Fmm.dianping.com%2Fweixin%2Faccount%2Fhome

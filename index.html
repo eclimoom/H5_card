@@ -112,6 +112,7 @@
                     data:{openid:oid},
                     success: function(data){
                         console.log('中奖纪录:',data,typeof(data));
+                        data = $.parseJSON(data);
                         if(data[0] && data[0].level){
                             MyNum = data[0].level;
                         }else{
@@ -140,7 +141,7 @@
                     url: 'http://wap.kuke.com/kuke/lottery/getLotteryTypeTimes',
                     success: function(data){
                         //["17","99","600"]
-
+                        data = $.parseJSON(data);
                         //data = [0,0,0];
                         var least = [parseInt(data[0], 10), parseInt(data[1], 10), parseInt(data[2], 10)];
 

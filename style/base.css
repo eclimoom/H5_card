@@ -109,6 +109,14 @@ and (max-device-width : 320px){
     .wrap .set-info-wrap .sent-btn{height: 32px;line-height: 30px;}
     .wrap .banner-wrap{padding-top: 30px;}
 }
+/*nexus 5*/
+@media only screen
+and (max-device-width : 360px){
+    .wrap .banner-wrap{padding-top: 20px;}
+    .wrap .set-info-wrap .sent-btn{height: 32px;line-height: 30px;}
+    .right-wrap{bottom: 18%;}
+    .ft-wrap{width: 40%;}
+}
 
 
 /*iPhone 6 Portrait*/
@@ -128,11 +136,3 @@ and (max-device-width : 320px){
 
 }
 
-/**
- *  Galaxy S3 portrait
- */
-@media screen
-and (device-width: 320px)
-and (device-height: 640px){
-
-}

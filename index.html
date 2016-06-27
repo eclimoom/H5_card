@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>幸运刮刮乐</title>
-    <link rel="stylesheet" href="style/base.css" />
+    <link rel="stylesheet" href="style/base.css?01" />
 </head>
 <body>
 <div class="wrap">
@@ -239,10 +239,10 @@
                     return;
                 }
 
-//                if (!/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/.test(vals[1])) {
-//                    showError($form, '请输入有效的手机号码!');
-//                    return;
-//                }
+                if (!/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/.test(vals[1])) {
+                    showError($form, '请输入有效的手机号码!');
+                    return;
+                }
 
                 params.name = vals[0];
                 params.tel = vals[1];
@@ -264,7 +264,7 @@
                     url: 'http://wap.kuke.com/kuke/lottery/saveUserInfo',
                     data:params,
                     success: function(data){
-                        if(data=='success'){
+                        if(data=='"success"'){
                             //3.显示抽奖
                             getLeastTimes();
                         }else{

@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>幸运刮刮乐</title>
-    <link rel="stylesheet" href="style/base.css?04" />
+    <link rel="stylesheet" href="style/base.css?05" />
 </head>
 <body>
 <div class="wrap">
@@ -12,10 +12,10 @@
     <div class="banner-wrap img-wrap"><img src="images/banner.gif" /></div>
     <div class="bd-wrap">
         <form class="set-info-wrap">
-            <input type="text" placeholder="请输入姓名" />
-            <input type="number" placeholder="您的手机号码" />
-            <input type="text" placeholder="您的公司或单位名称" />
-            <input type="text" placeholder="您的职务" />
+            <input type="text" class="set-name" placeholder="请输入姓名" />
+            <input type="number" class="set-tel"  placeholder="您的手机号码" maxlength="11"/>
+            <input type="text" class="set-com"  placeholder="您的公司或单位名称"/>
+            <input type="text" class="set-tit"  placeholder="您的职务"/>
             <button type="button" class="sent-btn">下一步</button>
             <p class="error-info">出错了!</p>
         </form>
@@ -101,8 +101,70 @@
                     MyNum = 0;
 
 
+            var checkLenght = function(INTEGER_REGEXP,val){
 
-                console.log('OpenId:',OpenId);
+            }
+
+
+
+            $form.on('keyup','.set-name',function(){
+                var _this = $(this),val = _this.val(),len = val.length,_val = val.replace(/[\u4e00-\u9fef]/g,""),
+                        maxlen = 10;
+                var a_len = _val.length;
+                var c_len = len-_val.length;
+                if(c_len>(maxlen-1)){
+                    _this.val(val.substring(0,maxlen));
+                }
+                if(a_len>(maxlen*2-1)){
+                    _this.val(val.substring(0,maxlen*2));
+                }
+                if((c_len*2+a_len)>maxlen*2){
+                    _this.val(val.substring(0,maxlen));
+                }
+            });
+
+            $form.on('keyup','.set-tel',function(){
+                var _this = $(this),val = _this.val(),len = val.length,
+                        maxlen = 11;
+                if(len>maxlen){
+                    _this.val(val.substring(0,maxlen));
+                }
+            });
+
+            $form.on('keyup','.set-com',function(){
+                var _this = $(this),val = _this.val(),len = val.length,_val = val.replace(/[\u4e00-\u9fef]/g,""),
+                        maxlen = 40;
+                var a_len = _val.length;
+                var c_len = len-_val.length;
+                if(c_len>(maxlen-1)){
+                    _this.val(val.substring(0,maxlen));
+                }
+                if(a_len>(maxlen*2-1)){
+                    _this.val(val.substring(0,maxlen*2));
+                }
+                if((c_len*2+a_len)>maxlen*2){
+                    _this.val(val.substring(0,maxlen));
+                }
+            });
+            $form.on('keyup','.set-tit',function(){
+                var _this = $(this),val = _this.val(),len = val.length,_val = val.replace(/[\u4e00-\u9fef]/g,""),
+                        maxlen = 10;
+                var a_len = _val.length;
+                var c_len = len-_val.length;
+                if(c_len>(maxlen-1)){
+                    _this.val(val.substring(0,maxlen));
+                }
+                if(a_len>(maxlen*2-1)){
+                    _this.val(val.substring(0,maxlen*2));
+                }
+                if((c_len*2+a_len)>maxlen*2){
+                    _this.val(val.substring(0,maxlen));
+                }
+            });
+
+
+
+//                console.log('OpenId:',OpenId);
 
             //我的中奖纪录
             var getRecord = function(oid){

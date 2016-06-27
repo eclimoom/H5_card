@@ -68,8 +68,8 @@ p{font-weight:400;line-height:23px;margin:0 0 10px;}
 .cardContainer img{width:100%;display:block;}
 .wrap{background:url("../images/BG.jpg") center center no-repeat;max-width:600px;position:relative;margin:0 auto; min-height: 500px;}
 .img-wrap img{display:block;width:100%;}
-.logo-wrap{width:31.76%;margin:0 0 0 7.4%;padding-top:30px;}
-.banner-wrap{width:72.78%;margin:0 auto 0 14px;padding-top:40px;}
+.logo-wrap{width:31.76%;margin:0 0 0 7.4%;padding-top:16px;}
+.banner-wrap{width:72.78%;margin:0 auto 0 14px;padding-top:36px;}
 .bd-wrap{width:85.2%;margin-left:7.4%;position:relative;/*background:rgba(255,0,0,0.3);*/
     z-index: 4;
 }

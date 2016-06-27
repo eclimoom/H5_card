@@ -71,9 +71,10 @@ p{font-weight:400;line-height:23px;margin:0 0 10px;}
 .logo-wrap{width:31.76%;margin:0 0 0 7.4%;padding-top:30px;}
 .banner-wrap{width:72.78%;margin:0 auto 0 14px;padding-top:40px;}
 .bd-wrap{width:85.2%;margin-left:7.4%;position:relative;/*background:rgba(255,0,0,0.3);*/
+    z-index: 4;
 }
-.right-wrap{width:73.15%;position:absolute;bottom:21%;left:13.42%;z-index:1;}
-.ft-wrap{position:absolute;bottom:12px;left:6.71%;width:44.37%;}
+.right-wrap{width:73.15%;position:absolute;bottom:21%;left:13.42%;z-index:2;}
+.ft-wrap{position:absolute;bottom:12px;left:6.71%;width:44.37%;z-index: 1;}
 .set-info-wrap{position: relative;}
 .set-info-wrap .over{font-size: 30px;color: #cacaca;padding-top: 30px;display: block;text-align: center;}
 .set-info-wrap .over-end{color: #ebf72c;}

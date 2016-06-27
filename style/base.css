@@ -1,6 +1,6 @@
 /* Base Application Styles */
 html{height:100%;}
-body{font-family:Tahoma,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.428;color:#3c3c3c;background-color:#fff;margin:0;height:100%;}
+body{height:100%;font-family:Tahoma,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.428;color:#3c3c3c;background-color:#fff;margin:0;height:100%;}
 /* Links ========================================================================== */
 /** * 1. Remove the gray background on active links in IE 10. * 2. Remove gaps in links underline in iOS 8+ and Safari 8+. */
 a{background-color:transparent;/* 1 */
@@ -66,7 +66,7 @@ p{font-weight:400;line-height:23px;margin:0 0 10px;}
 .wrap{position:relative;width:100%;height:100%;}
 .cardContainer{position:absolute;z-index:3;top:60px;left:4%;width:92%;}
 .cardContainer img{width:100%;display:block;}
-.wrap{background:url("../images/BG.jpg") center center no-repeat;max-width:600px;position:relative;margin:0 auto;}
+.wrap{background:url("../images/BG.jpg") center center no-repeat;max-width:600px;position:relative;margin:0 auto; min-height: 500px;}
 .img-wrap img{display:block;width:100%;}
 .logo-wrap{width:31.76%;margin:0 0 0 7.4%;padding-top:30px;}
 .banner-wrap{width:72.78%;margin:0 auto 0 14px;padding-top:40px;}

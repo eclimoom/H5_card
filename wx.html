@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>我嗨网</title>
+  <title>幸运刮刮乐</title>
   <meta name="keywords" content="美女直播 互动娱乐平台 我嗨 我嗨网">
   <meta name="description" content="美女直播互动娱乐平台">
   <meta http-equiv="Pragma" content="no-cache">
@@ -14,21 +14,16 @@
     html,body{background:#f8f8f8;}
   </style>
 
+  <script type="text/javascript">
+    (function(){
+      var _location = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx36130539f831fe09&redirect_uri=http%3A%2F%2Fwap.kuke.com%2Fcards%2Findex.html&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+      window.location.href = _location;
+    })();
+  </script>
+
 </head>
 <body>
 
-<script type="text/javascript">
-  (function(){
-    var _url = window.location.href;
 
-    _url = _url.replace('/wx.html','/index.html');
-    var _location = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx36130539f831fe09&redirect_uri='+encodeURIComponent(_url)+'&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
-
-    console.log(_location);
-    window.location.href = _location;
-
-  })();
-
-</script>
 </body>
 </html>

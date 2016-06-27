@@ -1,4 +1,13 @@
 LotteryCard
+
+
+
+
+token
+1u5hiTxK3xaXCNtI0hf_fBMMryrM3FwIcDpKJz7r6zZ1aCUD3rP6Vmbx_IRdhp3y-WG_hbeDigtMwZ-KLrgLYRQ3FXTWWYMK5tgqLH2ZJJpS7aV-LFQt1tG1MbB7nwLTEQSeAEAWIK
+
+{"errcode":0,"errmsg":"ok","ticket":"kgt8ON7yVITDhtdwci0qeTX05IjhNVqo2dVvBVDWea-A_mJ-mmxOxF5uFhuK-8rTgdtQ_EoEvtlFQVMWxMGLqg","expires_in":7200}
+
 =======
 H5刮奖,
 
